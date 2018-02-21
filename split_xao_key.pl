@@ -1,4 +1,5 @@
 #!/usr/bin/perl -l
+# Usage: split_xao_key.pl <LONG_KEY>
 my $tempStr = $ARGV[0];
 die ("You didn't provide a key to split. Exiting.") if (!$tempStr);
 my @keys = split / /,(join ' ', unpack '(A64)*', $tempStr);
